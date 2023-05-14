@@ -9,7 +9,7 @@ input.addEventListener('input', () => {
         counter.textContent = `${count} Caractere(s)`;
     } else {
         let word = input.value.trim().split(/\s+/);
-        count = word.length;
+        count = input.value.trim() === '' ? 0:word.length;
         counter.textContent = `${count} Palavra(s)`
     };
 })
